@@ -586,6 +586,10 @@ img {
   height: 20px;
   fill: #ffffff;
 }
+.footer-social-list-link:hover .footer-social-list-icon,
+.footer-social-list-link:focus .footer-social-list-icon {
+  fill: #ffffff;
+}
 .footer-social-list-item:not(:last-child) {
   margin-right: 10px;
 }
