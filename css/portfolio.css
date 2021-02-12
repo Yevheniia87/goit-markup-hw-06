@@ -204,11 +204,6 @@ img {
   flex-wrap: wrap;
   justify-content: center;
 }
-.btn-list-link:hover,
-.btn-list-link:focus {
-  background: var(--btn);
-  color: #ffffff;
-}
 .btn-list-link {
   display: block;
   font-weight: 500;
@@ -217,8 +212,8 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--btn-word);
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: 6px;
+  padding-bottom: 6px;
   width: 130px;
   height: 38px;
   background: var(--back-btn);
@@ -233,6 +228,8 @@ img {
 }
 .btn-list-link:hover,
 .btn-list-link:focus {
+  background: var(--btn);
+  color: #ffffff;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
