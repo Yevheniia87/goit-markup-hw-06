@@ -44,6 +44,16 @@ img {
 .address {
   font-style: normal;
 }
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
 .current::after {
   content: "";
   position: absolute;
@@ -242,7 +252,9 @@ img {
 }
 .modal-button:hover,
 .modal-button:focus {
-  background: var(--btn);
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 .modal-button-block {
   margin-top: 30px;
@@ -628,7 +640,11 @@ img {
   margin-right: 12px;
 }
 .modal-form-input-sub:focus {
-  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-form-sub-btn {
   display: flex;
@@ -649,7 +665,9 @@ img {
 }
 .modal-form-sub-btn:hover,
 .modal-form-sub-btn:focus {
-  outline: none;
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 .modal-form-sub-btn-icon {
   width: 24px;
@@ -694,9 +712,11 @@ img {
   width: 11px;
   height: 11px;
 }
-.close-btn-icon:hover,
-.close-btn-icon:focus {
+.modal-close-btn:hover .close-btn-icon,
+.modal-close-btn:focus .close-btn-icon {
   fill: var(--address-hover-focus);
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop.is-hidden {
   opacity: 0;
@@ -738,6 +758,8 @@ img {
 .modal-form-input:focus {
   outline: none;
   border-color: var(--address-hover-focus);
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-form-input-icon {
   left: 15px;
@@ -750,11 +772,13 @@ img {
 }
 .modal-form-input:focus + .modal-form-input-icon {
   fill: var(--address-hover-focus);
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-form-message {
   font-weight: 500;
-  font-size: 12px;
-  line-height: 1.167;
+  font-size: 14px;
+  line-height: 1.143;
   letter-spacing: 0.01em;
   display: block;
   width: 100%;
@@ -764,30 +788,48 @@ img {
   border-radius: 4px;
   padding: 12px 16px;
   cursor: pointer;
-
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-form-message:focus {
   outline: none;
   border-color: var(--address-hover-focus);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-form-message::placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
-/*.modal-form-policy {
-  display: flex;
-}*/
-.modal-form-check-policy {
-  display: flex;
-  margin-right: 7px;
+.modal-form-label-policy::before {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  content: "";
+  border-radius: 2px;
+  margin-right: 8px;
+  background-image: url("/img/Vector5.svg");
+  cursor: pointer;
 }
 .modal-form-label-policy {
+  display: flex;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.714;
   letter-spacing: 0.03em;
   color: #757575;
+  margin-top: 20px;
   margin-bottom: 30px;
+  align-items: center;
+}
+.modal-form-check-policy:checked + .modal-form-label-policy::before {
+  background-color: var(--btn-back);
+  background-image: url("/img/icon-check.svg");
+}
+.modal-form-check-policy:focus + .modal-form-label-policy::before {
+  box-shadow: 0 0 0 2px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.check-link {
+  color: #2196f3;
+  cursor: pointer;
 }
 .modal-form-btn {
   font-weight: 700;
@@ -796,9 +838,9 @@ img {
   display: flex;
   align-items: center;
   text-align: center;
+  justify-content: center;
   letter-spacing: 0.06em;
   color: #ffffff;
-  padding: 10px 55px;
   align-self: center;
   background-color: var(--btn);
   width: 200px;
@@ -808,5 +850,11 @@ img {
 }
 .modal-form-btn:hover,
 .modal-form-btn:focus {
-  outline: none;
+  background: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
