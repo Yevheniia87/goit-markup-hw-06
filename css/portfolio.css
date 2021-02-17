@@ -421,7 +421,8 @@ img {
 }
 .modal-form-sub {
   display: block;
-  margin-left: 90px;
+  position: relative;
+  margin-left: auto;
 }
 .sub-title {
   display: block;
@@ -447,7 +448,6 @@ img {
   color: #ffffff;
   background-color: var(--dark-topic);
   padding: 15px 16px;
-  margin-right: 12px;
 }
 .modal-form-input-sub:focus {
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -463,7 +463,7 @@ img {
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 16px;
   line-height: 1.875;
   letter-spacing: 0.06em;
@@ -472,6 +472,8 @@ img {
   background-color: var(--btn);
   color: #ffffff;
   cursor: pointer;
+  margin-left: 12px;
+  border: none;
 }
 .modal-form-sub-btn:hover,
 .modal-form-sub-btn:focus {
