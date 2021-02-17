@@ -798,13 +798,13 @@ img {
 .modal-form-message::placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
-.modal-form-check-policy {
+/*.modal-form-check-policy {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 
   position: absolute;
-}
+}*/
 .modal-form-label-policy::before {
   display: inline-block;
   width: 16px;
