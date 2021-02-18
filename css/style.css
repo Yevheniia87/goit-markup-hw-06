@@ -805,6 +805,9 @@ img {
 
   position: absolute;
 }*/
+.modal-form-check-policy:checked + .modal-form-label-policy::before {
+  background-color: #2196f3;
+}
 .modal-form-label-policy::before {
   display: inline-block;
   width: 16px;
@@ -812,12 +815,11 @@ img {
   content: "";
   border-radius: 2px;
   margin-right: 8px;
+  outline: 1px solid #212121;
   background-image: url("/img/Vector5.svg");
   cursor: pointer;
 }
-.modal-form-check-policy:checked + .modal-form-label-policy::before {
-  background-color: #2196f3;
-}
+
 .check-link {
   color: #2196f3;
   cursor: pointer;
