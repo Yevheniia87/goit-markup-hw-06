@@ -214,12 +214,13 @@ img {
   color: var(--btn-word);
   padding-top: 6px;
   padding-bottom: 6px;
-  width: 130px;
+  min-width: 130px;
   height: 38px;
   background: var(--back-btn);
   border-radius: 4px;
   cursor: pointer;
   border: none;
+  padding: 6px 22px;
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),

@@ -819,6 +819,10 @@ img {
   border-radius: 2px;
   border: none;
   background-image: url(../img/icon-check.svg);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-image 250 ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-form-label-policy {
   display: block;
@@ -839,17 +843,15 @@ img {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.875;
-  align-items: center;
-  justify-content: center;
   text-align: center;
-  align-self: center;
   letter-spacing: 0.06em;
   color: #ffffff;
   padding: 10px 54px;
-  background: #188ce8;
+  background: var(--btn);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
+  align-self: center;
   margin-top: 30px;
   cursor: pointer;
 }
