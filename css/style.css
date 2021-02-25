@@ -436,7 +436,7 @@ img {
   background-color: #ffffff;
   justify-content: center;
 
-  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-list-link:hover,
 .social-list-link:focus {
@@ -450,9 +450,10 @@ img {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-list-link:hover .social-list-icon,
-.social-list-icon:focus .social-list-icon {
-  fill: #ffffff;
+.social-list-link:focus .social-list-icon {
+  fill: var(--main-color);
 }
+
 /*====== END TEAM ======*/
 
 /*====== CLIENT ======*/
