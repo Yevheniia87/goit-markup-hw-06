@@ -141,10 +141,11 @@ img {
 }
 .mail-link {
   display: flex;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.143;
   letter-spacing: 0.02em;
+  margin-left: auto;
   margin-right: 50px;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -170,7 +171,7 @@ img {
 }
 .tel-link {
   display: flex;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.143;
   letter-spacing: 0.02em;
@@ -393,7 +394,7 @@ img {
   padding: 30px 32px;
 }
 .specialists {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.188;
   text-align: center;
@@ -433,11 +434,11 @@ img {
   width: 20px;
   height: 20px;
   fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-list-link:hover .social-list-icon,
 .social-list-link:focus .social-list-icon {
   fill: var(--main-color);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*====== END TEAM ======*/
 
@@ -496,7 +497,7 @@ img {
 }
 .client-list-link:hover .client-list-icon,
 .client-list-link:focus .client-list-icon {
-  fill: #2196f3;
+  fill: var(--btn);
 }
 /*====== FOOTER ======*/
 .container {
@@ -513,6 +514,7 @@ img {
 }
 .footer-container {
   display: flex;
+  align-items: baseline;
 }
 .logo-style-footer {
   color: var(--main-color);
@@ -540,7 +542,6 @@ img {
 }
 .contacts-list-link {
   color: var(--main-color);
-
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts_list {
@@ -552,7 +553,7 @@ img {
 }
 .footer-social-block {
   display: block;
-  margin-left: 72px;
+  margin-left: 70px;
 }
 .footer-social-title {
   display: block;
@@ -561,7 +562,7 @@ img {
   line-height: 1.143;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--main-color);
   margin-bottom: 20px;
 }
 .footer-social-list {
@@ -723,15 +724,12 @@ img {
   line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-bottom: 12px;
   color: #212121;
 }
 .modal-form-label {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.167;
-  letter-spacing: 0.01em;
   color: #757575;
-  margin-top: 12px;
+  margin-top: 10px;
 }
 .modal-form-wrapper {
   display: block;
@@ -752,6 +750,7 @@ img {
 .modal-form-input:focus {
   outline: none;
   border-color: var(--address-hover-focus);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-form-input-icon {
   left: 15px;
@@ -766,6 +765,7 @@ img {
 .modal-form-input:hover + .modal-form-input-icon,
 .modal-form-input:focus + .modal-form-input-icon {
   fill: var(--address-hover-focus);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-form-message {
   font-weight: 400;
